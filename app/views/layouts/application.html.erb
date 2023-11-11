@@ -14,11 +14,16 @@
 
   <body>
   <%= render 'shared/main_navbar' %>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-    
-      <%= yield %>
-  
+      <main class="flex justify-between"> 
+        <div class="w-full">    
+          <%= yield %>
+        </div>
+        <% if current_user %>
+          <nav class="bg-footerGray p-2">
+            <%= render 'shared/right_navbar' %>
+          </nav>
+        <% end %>
+      </main>
     <%= render 'shared/footer' %>
   </body>
 </html>

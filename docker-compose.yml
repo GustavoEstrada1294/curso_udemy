@@ -7,7 +7,7 @@ services:
     environment:
       POSTGRES_USERNAME: postgres
       POSTGRES_PASSWORD: password
-
+     
   redis:
     image: 'redis:latest'
     ports:
